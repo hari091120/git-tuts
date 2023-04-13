@@ -1,0 +1,313 @@
+// // // // // // let person={
+// // // // // //   firstName:"Hari",
+// // // // // //   lastName:"vaka",
+// // // // // //   middleName:"reddy",
+// // // // // //   age: 22
+// // // // // // };
+
+// // // // // // let{middleName="Reddy",age:currentAge=30}=person;
+// // // // // // console.log(person);
+
+
+// // // // // //null Object.
+// // // // // // function myFunction(){
+// // // // // //   return null;
+// // // // // // }
+
+// // // // // // let{firstName,lastName}= myFunction() || {};
+// // // // // // console.log(firstName);
+
+
+// // // // // //Nested object destructuring.
+// // // // // // let employess ={
+// // // // // //   id:1021,
+// // // // // //   name:{
+// // // // // //     firstName:"Harinath",
+// // // // // //     lastName:"Reddy"
+// // // // // //   }
+// // // // // // };
+
+// // // // // // let {id,name:{firstName,lastName},name}=employess
+// // // // // // console.log(name)
+
+// // // // // // let display =(person) => console.log(`${person.firstName} ${person.lastName}`);
+
+// // // // // // let person={
+// // // // // //   firstName:"Harinatha",
+// // // // // //   lastName:"Reddy"
+// // // // // // };
+// // // // // // display(person);
+
+// // // // // let display=({firstName,lastName}) =>console.log(`${firstName} ${lastName}`);
+
+// // // // // let person={
+// // // // //   firstName:"Hari",
+// // // // //   lastName:"nath"
+// // // // // };
+// // // // // display(person)
+
+
+
+// // // // //Higher order Functions.
+// // // // const Arithmetics ={
+// // // //   add:(a,b) =>{
+// // // //     return `${a} + ${b}=${a+b}`;
+// // // //   },
+// // // //   sub:(a,b) =>{
+// // // //     return `${a} -${b} =${a-b}`;
+// // // //   },
+// // // //   multiply:(a,b) =>{
+// // // //     return `${a} -${b} =${a*b}`;
+// // // //   }
+// // // // }
+// // // // console.log(Arithmetics.add(100,100))
+
+// // // var arr=[1,2,3,4,5,6,7,8]
+
+// // // function square(arr){
+// // //   square=[];
+// // //   for(ele of arr){
+// // //     res=ele*ele
+// // //     square.push(res);
+// // //   }
+// // //   return square;
+// // // }
+// // // function cubes(arr){
+// // //   cube=[];
+// // //   for(ele of arr){
+// // //     res=ele*ele*ele
+// // //     cube.push(res);
+// // //   }
+// // //   return cube;
+// // // }
+// // // let x=square(arr)
+// // // console.log(x)
+// // // let y=cubes(arr)
+// // // console.log(y)
+
+// // const radius=[3,1,2,4];
+
+// // const caluculate=function myfunction(radius,anyOperation){
+// //     let output=[];
+// //     for(ele of radius){
+// //         let num=anyOperation(ele);
+// //         output.push(num);
+// //     }
+// //     return output;
+// // }
+// // function area(radius){
+// //     return Math.PI*radius*radius;
+// // }
+
+// // console.log(caluculate(radius,area));
+
+
+// // const arr=[1,2,3,4,5];
+
+// // function double(x){
+// //     return x*=2;
+// // }
+// // function triple(x){
+// //   return x*=x*x;
+// // }
+// // function binary(x){
+// //   return x.toString(2);
+// // }
+// // const output=arr.map(binary);
+// // console.log(output);
+
+// const arr=[1,2,3,4,5,6,7,8]
+
+// // function isOdd(x){
+// //   return x>5;
+// // }
+
+// //filter odd values.
+// // const output=arr.filter((y)=>y>4);
+// // console.log(output)
+
+// function findSum(arr){
+//   let sum=0;
+//   for(i of arr){
+//     sum+=i;
+//   }
+//   return sum;
+// }console.log(findSum(arr))
+
+const name=[
+  {firstName:"Hari", lastName:"nath",age:22},
+  {firstName:"satya",lastName:"narayana",age:18},
+  {firstName:"guna",lastName:"sekhar",age:12},
+  {firstName:"renu",lastName:"sri",age:22},
+]
+
+const output=name.reduce(function(acc,curr){
+  if(curr.age>20){
+    acc.push(curr.firstName)
+  }
+  return acc
+},[]);
+console.log(output)
+
+// const output=name.filter((x) => x.age<20).map((x)=>x.firstName+x.lastName);
+// console.log(output)
+
+
+// const output=name.reduce(function(acc,curr){
+
+//   if(acc[curr.age]){
+//     acc[curr.age]=++acc[curr.age];
+//   }
+//   else{
+//     acc[curr.age]=1;
+//   }
+//   return acc;
+// },{})
+// console.log(output)
+
+
+1)//using for loop.
+const practiceData = [[14,21,23,64], [33,46,51,65]]
+for(let i=0;i<practiceData.length;i++){
+  for(let j=0;j<practiceData[0].length;j++){
+    practiceData[i][j]=practiceData[i][j]+1;
+  }
+}
+console.log(practiceData)
+
+2)//using map function
+
+function multiply(currentNumber,index){
+  if(index%2==0){
+    return currentNumber*2;
+  }
+  else{
+    return currentNumber*10;
+  }
+}
+let output=array.map(multiply)
+console.log(output)
+
+//last question
+const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
+
+const uppercase=function toUpper(countries,operation){
+  let output=[];
+  for(i of countries){
+    let convert=operation(i);
+    output.push(convert);
+  }
+  return output;
+}
+
+console.log(uppercase(countries,upperCase))
+
+function upperCase(countries){
+  
+  return countries.toUpperCase();
+}
+
+const carBrands = ["honda", "toyota", "maruti","tata"]
+ const carModel = ["city", "innova", "alto", "nano"]
+ 
+const carObject = {}
+
+carBrands.forEach((element,index)=>{
+  carObject[element]=carModel[index];
+});
+
+console.log(carObject )
+
+
+
+
+
+------------------------------------------------------------------------------
+
+
+function profileLookup(name, property) {
+    //write your code here
+  for(let index=0;index<facebookProfiles.length;index++){
+    const student=facebookProfiles[index];
+    if(name==student.firstName){
+      if(student.hasOwnProperty(property)){
+        return student[property]
+      }
+      else{
+        return "no such property";
+      }
+    }
+  }
+  return "person does not exist";
+}
+console.log(profileLookup("Pritesh","number"))
+
+-------------------------------------------------------------------------------------------
+
+function getNamesFromGurgaon(facebookProfiles) {
+    //write your code here
+ const personList=facebookProfiles.filter(person=>person.address.location==="gurgaon")
+// console.log(personList)
+const result=personList.map((person =>person.firstName +" " +(person.hasOwnProperty("lastName")?person.lastName:"")));
+
+  return result
+}
+
+console.log(getNamesFromGurgaon(facebookProfiles))
+--------------------------------------------------------------------------
+
+function findFullName(stateName) {
+    //write your code here
+  let output=[]
+    for(let index=0;index<facebookProfiles.length;index++){
+      const student =facebookProfiles[index];
+      if(stateName==student.address.state){
+        output.push(student.firstName+" "+(student.hasOwnProperty("lastName")?student.lastName:""));
+      }
+    }
+  return output;
+}
+
+console.log(findFullName("haryana"));
+
+-------------------------------------------------------------------------------------
+
+function getFullName(facebookProfiles) {
+    //write your code here
+  const result=facebookProfiles.map((person => person.firstName+" "+
+    (person.hasOwnProperty("lastName")?person.lastName:"")));
+  return result;
+}
+console.log(getFullName(facebookProfiles))
+
+---------------------------------------------------------------------------------
+
+function getNameFromDelhiWithDL(facebookProfiles) {
+ //write your code here
+const answer=facebookProfiles.filter(person=>person.address.state==="Delhi")
+const dl=answer.filter(person=>person.hasDrivingLicense===true)
+const output=dl.map((person=>person.firstName))
+  if(output==""){
+    return "no such person"
+}
+  return output
+  
+}
+console.log(getNameFromDelhiWithDL(facebookProfiles))
+
+----------------------------------------------------------------------------------
+
+// 1st question.
+// function findCard(value, suit) {
+//   const output=cardData.filter(find=>find.value==value)
+//   const output1=output.filter(find=>find.suit==suit)
+//   if(output1!=""){
+//     return true;
+//   }
+//   else{
+//     return false;
+//   }
+// }
+// console.log(findCard(10,"club"))
+
+
