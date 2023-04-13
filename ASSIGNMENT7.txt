@@ -1,0 +1,264 @@
+problem 1
+//if the number is even and less than 15, print a
+// if the number is even and more than 15, print b
+//if the number is odd and less than 10, print c
+//if the number is odd and more than 10, print d
+
+//using logical operators 
+
+let num = 9;
+
+if(num % 2 === 0 && num < 15) {
+  console.log('a');
+} else if(num % 2 === 0 && num > 15) {
+  console.log('b');
+} else if(num % 2 !== 0 && num < 10) {
+  console.log('c');
+} else {
+  console.log('d');
+}
+
+
+//if the number is even and less than 15, print a
+// if the number is even and more than 15, print b
+//if the number is odd and less than 10, print c
+//if the number is odd and more than 10, print d
+
+//using nested if else
+
+let num = 9;
+
+if(num % 2 === 0) {
+  if(num < 15) {
+    console.log('a');
+  } else {
+    console.log('b');
+  }
+} else {
+  if(num < 10) {
+    console.log('c');
+  } else {
+    console.log('d');
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+problem 2
+Result
+//answer should be: "Hi, my name is Farheena"
+//we need to solve this using for loop
+
+
+ANS :
+
+const n = 1;
+for (let i = 1; i <= n; i++) {
+    console.log('Hi,my name is gurank verma');
+  
+}
+
+
+
+
+Problem 4 
+
+//create a variable called myName and store your name inside it.
+//then, add Mr./Miss. before it and store the result in
+//a new variable with the same name i.e. myName.//
+
+
+var myName = "Gurank";
+myName = "Mr./Miss. " + myName;
+console.log(myName)
+
+
+
+
+Problem 5
+
+//Find sum and multiplication of  all natural numbers from 10 to 20
+
+ans.
+
+let sum = 0;
+let  multiplication = 1;
+
+for (let i = 10; i <= 20; i++) {
+    sum += i;
+    multiplication *= i;
+}
+
+console.log('The sum of natural numbers:', sum);
+console.log('The  multiplication of natural number: ',  multiplication);
+
+
+
+
+
+problem 6
+
+//Check whether a given year is a leap year
+//create a variable and store a random year in it 
+//now write code, which should return  true or false, depending whether the value in the above variable is leap year or not
+
+
+
+
+
+ans.
+
+// Store a random year in a variable
+const year = 2000;
+
+// Check if the year is a leap year
+const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+
+// Log the result to the console
+console.log(isLeapYear); 
+
+
+
+problem.7
+
+//find the area of a triangle.  Lengths of its sides are 5, 6, 7
+
+
+const side1 = 5;
+const side2 = 6;
+const side3 = 7;
+
+
+const s = (side1 + side2 + side3) / 2;
+
+//calculate the area
+const areaValue = Math.sqrt(
+  s * (s - side1) * (s - side2) * (s - side3)
+);
+
+console.log('The area of the triangle is ${areaValue}');
+
+
+
+problem 8
+
+//create two variables and store numbers in them.
+//Now, write code, which return true if one of the variable is 50 or if their sum is 50.
+//Otherwise, you need to return false.
+//Also handle edge cases
+//(in real world, these two numbers will be supplied by the users.
+//Now think what if they supply something which is not a number ?)
+
+
+
+const a = 20;
+const b = 10;
+
+
+const isSum50OrOne50 =  () => {
+    const sum = Number(a) + Number(b);
+  if ((a == 50 || b == 50 || sum == 50)) {
+    return true;
+  } else {
+    (isNaN(a) || isNaN(b)) 
+    return false;
+  }
+};
+
+
+console.log(isSum50OrOne50());
+
+ 
+
+
+problem 9
+
+
+//create a variable and store a number inside it
+//write program to check whether a given variable is between 100 and 200
+//write program to check whether a given variable is between 100 and 200 or 400 and 500
+//handle edge cases
+
+
+ans:
+
+const num = "150";
+
+
+const isBetween100And200 = () => {
+  if (isNaN(num)) {
+    return false;
+  } else {
+    const n = Number(num);
+    return (n >= 100 && n <= 200);
+  }
+};
+
+
+const isBetween100And200Or400And500 = () => {
+  if (isNaN(num)) {
+    return false;
+  } else {
+    const n = Number(num);
+    return (n >= 100 && n <= 200) || (n >= 400 && n <= 500);
+  }
+};
+
+
+console.log(isBetween100And200()); 
+console.log(isBetween100And200Or400And500());
+
+
+problem 10
+
+//you have 3 numbers.
+//write a program which can find the largest number
+
+const num1 = 2;
+const num2 = 5;
+const num3 = 7;
+
+if(num1 >= num2 && num1 >= num3) {
+    largest = num1;
+}
+else if (num2 >= num1 && num2 >= num3) {
+    largest = num2;
+}
+else {
+    largest = num3;
+}
+
+console.log("The largest number is " + largest);
+
+
+
+problem: 11
+
+//create two variables and assign numbers to them
+//now write a code which returns true if one of them is 8 or their sum or difference is 8. Otherwise it should return false
+
+
+ans 
+
+let num1 = 3;
+let num2 = 4;
+
+if (num1 === 8 || num2 === 8 || num1 + num2 === 8 || Math.abs(num1 - num2) === 8) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+
+
